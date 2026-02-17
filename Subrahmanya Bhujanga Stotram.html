@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>శ్రీ సుబ్రహ్మణ్య భుజంగము</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu&family=Noto+Sans+Telugu:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D4AF37;
+            --accent-color: #2F4F4F;
+            --bg-gradient-start: #FFF8E7;
+            --bg-gradient-end: #FFE4B5;
+            --text-color: #2C1810;
+            --verse-bg: rgba(255, 255, 255, 0.85);
+            --shadow: 0 8px 32px rgba(139, 69, 19, 0.15);
+            --header-scale: 0.48828125;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Telugu', 'Tiro Telugu', serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            color: var(--text-color);
+            line-height: 2;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            display: none;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: calc(1rem * var(--header-scale)) calc(2.5rem * var(--header-scale));
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.08) 0%, rgba(212, 175, 55, 0.08) 100%);
+            border-radius: 20px;
+            backdrop-filter: none;
+            box-shadow: var(--shadow);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-family: 'Tiro Telugu', serif;
+            font-size: calc(3.5rem * var(--header-scale));
+            color: var(--primary-color);
+            margin-bottom: calc(0.1rem * var(--header-scale));
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(212, 175, 55, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: calc(1.9rem * var(--header-scale));
+            color: var(--accent-color);
+            font-weight: 500;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .verse-container {
+            margin-bottom: 3rem;
+            padding: 2.5rem;
+            background: var(--verse-bg);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            backdrop-filter: none;
+            border-left: 5px solid var(--secondary-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.2s ease;
+            content-visibility: auto;
+            contain: layout paint style;
+            contain-intrinsic-size: 900px;
+        }
+
+        .verse-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(139, 69, 19, 0.2);
+            border-left-color: var(--primary-color);
+        }
+
+        .verse-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        @media (max-width: 1200px) {
+            .verse-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .verse-number {
+            display: inline-block;
+            font-family: 'Tiro Telugu', serif;
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: white;
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+        }
+
+        .verse-text {
+            font-size: 1.4rem;
+            line-height: 2.2;
+            color: var(--text-color);
+            text-align: justify;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        .verse-line {
+            margin-bottom: 0.8rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .verse-line::before {
+            content: '॥';
+            position: absolute;
+            left: -0.5rem;
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            opacity: 0.6;
+        }
+
+        .verse-line:last-child {
+            margin-bottom: 0;
+        }
+
+        .verse-meaning {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(139, 69, 19, 0.05) 100%);
+            border-radius: 12px;
+            border-left: 3px solid var(--secondary-color);
+            height: 100%;
+        }
+
+        .meaning-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-family: 'Tiro Telugu', serif;
+        }
+
+        .meaning-text {
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-color);
+            text-align: justify;
+            font-weight: 400;
+        }
+
+        footer {
+            text-align: center;
+            padding: calc(1rem * var(--header-scale)) calc(2.5rem * var(--header-scale));
+            margin-top: 4rem;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.08) 0%, rgba(212, 175, 55, 0.08) 100%);
+            border-radius: 20px;
+            backdrop-filter: none;
+            box-shadow: var(--shadow);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        footer p {
+            font-size: calc(1.9rem * var(--header-scale));
+            color: var(--accent-color);
+            font-weight: 500;
+            line-height: 1.8;
+        }
+
+        .om-symbol {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin: 1rem 0;
+            text-shadow: 2px 2px 8px rgba(212, 175, 55, 0.4);
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        header .om-symbol {
+            font-size: calc(3rem * var(--header-scale));
+            margin: calc(1rem * var(--header-scale)) 0;
+        }
+
+        footer .om-symbol {
+            font-size: calc(3rem * var(--header-scale));
+            margin: calc(1rem * var(--header-scale)) 0;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body::before {
+                display: none;
+            }
+
+            h1 {
+                font-size: calc(2.5rem * var(--header-scale));
+            }
+
+            .verse-text {
+                font-size: 1.3rem;
+                line-height: 2;
+            }
+
+            .meaning-text {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            .verse-container {
+                padding: 1.5rem;
+            }
+
+            .verse-content {
+                gap: 1.5rem;
+            }
+
+            .verse-container:hover {
+                transform: none;
+                box-shadow: var(--shadow);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: calc(2rem * var(--header-scale));
+            }
+
+            .subtitle {
+                font-size: calc(1.1rem * var(--header-scale));
+            }
+
+            .verse-text {
+                font-size: 1.2rem;
+            }
+
+            .meaning-text {
+                font-size: 1rem;
+            }
+
+            .verse-container {
+                padding: 1.2rem;
+            }
+        }
+
+        /* Decorative elements */
+        .decorative-line {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+            margin: 2rem auto;
+        }
+
+        header .decorative-line {
+            width: calc(100px * var(--header-scale));
+            height: calc(3px * var(--header-scale));
+            margin: calc(2rem * var(--header-scale)) auto;
+        }
+
+        footer .decorative-line {
+            width: calc(100px * var(--header-scale));
+            height: calc(3px * var(--header-scale));
+            margin: calc(2rem * var(--header-scale)) auto;
+        }
+
+        .verse-header-row {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .verse-header-row .verse-number {
+            margin-bottom: 0;
+        }
+
+        .audio-sync-panel {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin: 0;
+            padding: 0.45rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(139, 69, 19, 0.08);
+            border: 1px solid rgba(139, 69, 19, 0.18);
+            width: fit-content;
+        }
+
+        .audio-icon-btn {
+            width: 2.4rem;
+            height: 2.4rem;
+            border: 1px solid rgba(139, 69, 19, 0.3);
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(139, 69, 19, 0.15));
+            color: var(--primary-color);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .audio-icon-btn:hover {
+            transform: translateY(-1px);
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.2);
+        }
+
+        .audio-icon-btn:focus-visible {
+            outline: 2px solid var(--secondary-color);
+            outline-offset: 2px;
+        }
+
+        .audio-icon-btn.is-playing {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.35);
+        }
+
+        .audio-wave {
+            display: inline-flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 14px;
+        }
+
+        .audio-wave span {
+            width: 3px;
+            border-radius: 2px;
+            background: currentColor;
+            height: 6px;
+            transition: height 0.2s ease;
+        }
+
+        .audio-wave span:nth-child(2) {
+            height: 10px;
+        }
+
+        .audio-wave span:nth-child(3) {
+            height: 8px;
+        }
+
+        .audio-icon-btn.is-playing .audio-wave span:nth-child(1) {
+            animation: waveOne 0.9s ease-in-out infinite;
+        }
+
+        .audio-icon-btn.is-playing .audio-wave span:nth-child(2) {
+            animation: waveTwo 0.9s ease-in-out infinite;
+        }
+
+        .audio-icon-btn.is-playing .audio-wave span:nth-child(3) {
+            animation: waveThree 0.9s ease-in-out infinite;
+        }
+
+        .verse-audio-hidden {
+            display: none;
+        }
+
+        .audio-sync-panel.audio-error {
+            border-color: rgba(153, 27, 27, 0.55);
+            background: rgba(153, 27, 27, 0.08);
+        }
+
+        .verse-container.audio-playing {
+            border-left-color: var(--primary-color) !important;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.35), 0 12px 40px rgba(139, 69, 19, 0.2);
+        }
+
+        .verse-line {
+            border-radius: 8px;
+        }
+
+        @keyframes waveOne {
+            0%, 100% { height: 6px; }
+            50% { height: 13px; }
+        }
+
+        @keyframes waveTwo {
+            0%, 100% { height: 10px; }
+            50% { height: 6px; }
+        }
+
+        @keyframes waveThree {
+            0%, 100% { height: 8px; }
+            50% { height: 12px; }
+        }
+
+        @media (max-width: 768px) {
+            .verse-header-row {
+                gap: 0.5rem;
+                margin-bottom: 0.9rem;
+            }
+
+            .audio-sync-panel {
+                padding: 0.4rem 0.55rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="om-symbol">ॐ</div>
+            <h1>శ్రీ సుబ్రహ్మణ్య భుజంగము</h1>
+            <div class="decorative-line"></div>
+            <p class="subtitle">శ్రీ ఆది శంకరాచార్య విరచితము</p>
+        </header>
+
+        <main>
+                        <div class="verse-container">
+                <div class="verse-number">శ్లోకము 1</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">సదా బాలరూపాऽపి విఘ్నాద్రిహంత్రీ</div>
+                    <div class="verse-line">మహాదంతివక్త్రాऽపి పంచాస్యమాన్యా ।</div>
+                    <div class="verse-line">విధీంద్రాదిమృగ్యా గణేశాభిధా మే</div>
+                    <div class="verse-line">విధత్తాం శ్రియం కాऽపి కళ్యాణమూర్తిః ॥</div>
+                </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఎల్లప్పుడు బాల రూపమున నున్నను, విఘ్నపర్వతముల భేదించునదియు, గొప్ప గజముఖము గలదైనను పంచాస్యుని (సింహము – శివుడు) ఆదర పాత్రమును, బ్రహ్మ, ఇంద్రుడు మున్నగు వారిచే వెతుక దగినదియు గణేశుడను పేరు గల ఒకానొక మంగళరూపము నాకు సంపదను కలుగజేయు గాక!</div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 2</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">న జానామి శబ్దం న జానామి చార్థం</div>
+                    <div class="verse-line">న జానామి పద్యం న జానామి గద్యమ్ ।</div>
+                    <div class="verse-line">చిదేకా షడాస్యా హృది ద్యోతతే మే</div>
+                    <div class="verse-line">ముఖాన్నిఃసరంతే గిరశ్చాపి చిత్రమ్ ॥</div>
+                </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">నేను శబ్దము నెరుగను. అర్థము నెరుగను, పద్యము నెరుగను, గద్యము నెరుగను. ఆరు ముఖములు గల ఒకానొక చిద్రూపము నా హృదయమునందు ప్రకాశించుచున్నది. నోటినుండి చిత్రముగా మాటలు వెలువడుతున్నవి.</div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 3</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">మయూరాధిరూఢం మహావాక్యగూఢం</div>
+                    <div class="verse-line">మనోహారిదేహం మహచ్చిత్తగేహమ్ ।</div>
+                    <div class="verse-line">మహీదేవదేవం మహావేదభావం</div>
+                    <div class="verse-line">మహాదేవబాలం భజే లోకపాలమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">నెమలిని నధిష్టించి యున్నవాడును, వేదాంత మహావాక్యములలో నిగూఢముగా నున్నవాడును, మనోహరమైన దేహము గలవాడును, మహాత్ముల చిత్తమునందు నివసించువాడును, బ్రాహ్మణుల కారాధ్యుడును, వేదములచే ప్రతిపాద్యుడను, మహాదేవుని నందనుడును, లోకపాలకుడు అయిన సుబ్రహ్మణ్యేశ్వరుని సేవించుచున్నాను.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 4</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">యదా సంనిధానం గతా మానవా మే</div>
+                    <div class="verse-line">భవాంభోధిపారం గతాస్తే తదైవ ।</div>
+                    <div class="verse-line">ఇతి వ్యంజయన్సింధుతీరే య ఆస్తే</div>
+                    <div class="verse-line">తమీడే పవిత్రం పరాశక్తిపుత్రమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">"నా సాన్నిధ్యమును పొందిన వెంటనే మనుజులు సంసార సాగరమును దాటుదురు" అని సూచించుచు, సముద్ర తీరముననున్న పరాదేవత యొక్క పుత్రుడగు పవిత్రుడైన సుబ్రహ్మణ్యుని స్తుతింతును.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 5</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">యథాబ్ధేస్తరంగా లయం యాంతి తుంగా-</div>
+                    <div class="verse-line">స్తథైవాపదః సంనిధౌ సేవతాం మే ।</div>
+                    <div class="verse-line">ఇతీవోర్మిపంక్తీర్నృణాం దర్శయంతం</div>
+                    <div class="verse-line">సదా భావయే హృత్సరోజే గుహం తమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఎగసిపడు సముద్ర తరంగములు (ఒడ్డున ఉన్న) నన్ను చేరి లయమగునట్లుగా నా సన్నిధానమున సేవించు జనుల ఆపదలు నశించిపోవును" అని చెప్పుచున్నట్లుగా మానవులకు సముద్ర తరంగములను చూపుచున్న ఆ కార్తికేయుని నా హృదయపద్మము నందు సదా తలంతును.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 6</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">గిరౌ మన్నివాసే నరా యేऽధిరూఢా-</div>
+                    <div class="verse-line">స్తదా పర్వతే రాజతే తేऽధిరూఢాః ।</div>
+                    <div class="verse-line">ఇతీవ బ్రువన్గంధశైలాధిరూఢః</div>
+                    <div class="verse-line">స దేవో ముదే మే సదా షణ్ముఖోऽస్తు ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">"నా నివాసస్థానమగు పర్వతము నెక్కిన నరులుకైలాసము నధిష్టించ గలరు అని చెప్పుచున్న వాని వాలే గంధశైలము నధిష్టించియున్న ఆ షణ్ముఖ దేవుడు ఎల్లప్పుడూ నాకు సంతోషము కలిగించు గాక !</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 7</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">మహాంభోధితీరే మహాపాపచోరే</div>
+                    <div class="verse-line">మునీంద్రానుకూలే సుగంధాఖ్యశైలే ।</div>
+                    <div class="verse-line">గుహాయాం వసంతం స్వభాసా లసంతం</div>
+                    <div class="verse-line">జనార్తిం హరంతం శ్రయామో గుహం తమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">మహా సముద్రతీరమందున్నదీ, మహా పాపములు హరించునదీ, మునీంద్రులకు కావాసమును నగు గంధశైలమునందు, గుహయందు తన కాంతితో ప్రకాశించుచు నివసించుచున్నవాడను, జనుల బాధలను హరించు వాడను నాగు కుమారస్వామిని సేవింతుము</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 8</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">లసత్స్వర్ణగేహే నృణాం కామదోహే</div>
+                    <div class="verse-line">సుమస్తోమసంఛన్నమాణిక్యమంచే ।</div>
+                    <div class="verse-line">సముద్యత్సహస్రార్కతుల్యప్రకాశం</div>
+                    <div class="verse-line">సదా భావయే కార్తికేయం సురేశమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">మనుజుల కోరికల నొసంగు కనక భవనములనందు పుష్ప సముదాయముచే గప్పబడిన రత్న పీఠముచే ఉదయించుచున్న సహస్రాదిత్యులతో సాటి అయిన వెలుగు గల దేవత శ్రేష్ఠుడైన కుమారస్వామిని నిరంతరం తలంచెదను.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 9</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">రణథంసకే మంజులేऽత్యంతశోణే</div>
+                    <div class="verse-line">మనోహారిలావణ్యపీయూషపూర్ణే ।</div>
+                    <div class="verse-line">మనఃషట్పదో మే భవక్లేశతప్తః</div>
+                    <div class="verse-line">సదా మోదతాం స్కంద తే పాదపద్మే ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఓ కుమారస్వామీ! సంసారము నందలి కష్టములచే తపింప జేయబడిన నా మనస్సనెడి తుమ్మెద – శబ్దించుచున్న అందెలతో మనోహరమై మిక్కిలి ఎఱ్ఱనిదీ , మనోహరమైన లావణ్యామృతముతో నిండియున్న నీ పాదపద్మమునందు నిరంతరము ఆనందించు గాక!</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 10</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">సువర్ణాభదివ్యాంబరైర్భాసమానాం</div>
+                    <div class="verse-line">క్వణత్కింకిణీమేఖలాశోభమానామ్ ।</div>
+                    <div class="verse-line">లసద్ధేమపట్టేన విద్యోతమానం</div>
+                    <div class="verse-line">కటిం భావయే స్కంద తే దీప్యమానామ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఓ కుమారస్వామీ! బంగారము వంటి కాంతి గల దివ్య వస్త్రముల తోను, శబ్దించుచున్న చిరు గంటలు గల మొలనూలుతోను, ప్రకాశించు చున్న బంగారపు పట్టెతోను, ప్రకాశించుచున్న నీ యొక్క కటి ప్రదేశమును ధ్యానింతును.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 11</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">పులిందేశకన్యాఘనాభోగతుంగ-</div>
+                    <div class="verse-line">స్తనాలింగనాసక్తకాశ్మీరరాగమ్ ।</div>
+                    <div class="verse-line">నమస్యామ్యహం తారకారే తవోరః</div>
+                    <div class="verse-line">స్వభక్తావనే సర్వదా సానురాగమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">తారకాసురుని సంహారించిన సుబ్రహ్మణ్య దేవా ! పుళింద కన్య యగు వల్లీదేవి యొక్క ఉన్నతములైన రొమ్ముల యాలింగనముచే లగ్నమైన కుంకుమచే ఎఱ్ఱనైనదియు, నిజ భక్తుల రక్షణమున నెల్లప్పుడు ఆసక్తిగల నీ వక్షస్థలమును నమస్కరింతును.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 12</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">విధౌ క్లృప్తదండాన్స్వలీలాధృతాండా-</div>
+                    <div class="verse-line">న్నిరస్తేభశుండాంద్విషత్కాలదండాన్ ।</div>
+                    <div class="verse-line">హతేంద్రారిషండాన్జగత్రాణశౌండా-</div>
+                    <div class="verse-line">న్సదా తే ప్రచండాన్శ్రయే బాహుదండాన్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">విధిని కూడా దందించునవీ, బ్రహ్మాండమును మ్రోయుచున్నవీ, ఏనుగుల తొండములకంటే బలమైనవీ, శత్రువులకు యమదండములైనవీ, రాక్షసులను సంహరించునవీ, లోకములను రక్షించునవీ, ప్రచండములైనవీ, అయిన నీ బాహుదండములను నేను ఎల్లప్పుడూ ఆశ్రయించుచున్నాను.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 13</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">సదా శారదాః షణ్మృగాంకా యది స్యుః</div>
+                    <div class="verse-line">సముద్యంత ఏవ స్థితాశ్చేత్సమంతాత్ ।</div>
+                    <div class="verse-line">సదా పూర్ణబింబాః కళంకైశ్చ హీనా-</div>
+                    <div class="verse-line">స్తదా త్వన్ముఖానాం బ్రువే స్కంద సామ్యమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఓ కుమారస్వామీ! చంద్రులు ఎల్లపుడును శరచ్చంద్రులు గాను, ఆరు సంఖ్యగలవారుగను, ఉదయించుచున్నవారుగను , పూర్ణబింబోపేతులుగను, కళంక శూన్యులుగను నుందురేని అపుడు నీ ముఖములతో పోలికను చెప్పుదును.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 14</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">స్ఫురన్మందహాసైః సహంసాని చంచ-</div>
+                    <div class="verse-line">త్కటాక్షావలీభృంగసంఘోజ్జ్వలాని ।</div>
+                    <div class="verse-line">సుధాస్యందిబింబాధరాణీశసూనో</div>
+                    <div class="verse-line">తవాలోకయే షణ్ముఖాంభోరుహాణి ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఓ శివ కుమారా! చిరునవ్వుల నెడి హంసలతోనూ , చంచలమైన కటాక్షముల (క్రీగంటిచూపులు) నెడి తుమ్మెదలతోనూ, అమృతము స్రవించు దొండపండువంటి పెదవులతో కల నీ ఆరు ముఖలనెడి పద్మములను దర్శింతును.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 15</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">విశాలేషు కర్ణాంతదీర్ఘేష్వజస్రం</div>
+                    <div class="verse-line">దయాస్యందిషు ద్వాదశస్వీక్షణేషు ।</div>
+                    <div class="verse-line">మయీషత్కటాక్షః సకృత్పాతితశ్చే-</div>
+                    <div class="verse-line">ద్భవేత్తే దయాశీల కా నామ హానిః ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">దయాశీలుడా! విశాలములను, కర్ణాంత పర్యంత దీర్ఘములను నగు నీ యొక్క పన్నెండు నేత్రములు దయను వర్షించుచుడంగా , నీ మంద కటాక్షము నాపై నొక పర్యాయము ప్రసరింప జేసిదవేని నీకు హాని యేమి ?</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 16</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">సుతాంగోద్భవో మేऽసి జీవేతి షడ్ధా</div>
+                    <div class="verse-line">జపన్మంత్రమీశో ముదా జిఘ్రతే యాన్ ।</div>
+                    <div class="verse-line">జగద్భారభృద్భ్యో జగన్నాథ తేభ్యః</div>
+                    <div class="verse-line">కిరీటోజ్జ్వలేభ్యో నమో మస్తకేభ్యః ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">కుమారా! చిరంజీవ! అని ఆరు పర్యాయము లుచ్చరించి శివుడు ఆఘ్రూ ణించు ననియు, జగద్బారమును నిర్వహింప సమర్థములును, కిరీటములచే ప్రకాశించుచున్న నీ తలలకు ఓ జగన్నాథా! నమస్కారము.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 17</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">స్ఫురద్రత్నకేయూరహారాభిరామ-</div>
+                    <div class="verse-line">శ్చలత్కుండలశ్రీలసద్గండభాగః ।</div>
+                    <div class="verse-line">కటౌ పీతవాసాః కరే చారుశక్తిః</div>
+                    <div class="verse-line">పురస్తాన్మమాస్తాం పురారేస్తనూజః ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">కాంతివంతమైన రత్నకంకణములతో, హారములతో మనోహరమైనవాడును , చలించుచున్న కుండల కాంతిచే ప్రసరించు చెక్కిళ్ళు గలవాడును, నడుమున పీత వస్త్రము, హస్తమున చేతిలో మనోహరమగు శక్తి (ఆయుధము)యు గల శివనందనుడగు కుమారస్వామి నా ఎదుట ఉండుగాక!</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 18</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">ఇహాయాహి వత్సేతి హస్తాన్ప్రసార్యా-</div>
+                    <div class="verse-line">హ్వయత్యాదరాచ్ఛంకరే మాతురంకాత్ ।</div>
+                    <div class="verse-line">సముత్పత్య తాతం శ్రయంతం కుమారం</div>
+                    <div class="verse-line">హరాశ్లిష్టగాత్రం భజే బాలమూర్తిమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">బిడ్డా! ఇటు రమ్ము" అని చేతులను చాచి ఆదరముతో శంకరుడు పిలుచుచుండగా తల్లి యొడినుండి దూకి తండ్రి నాశ్రయించి వానిచే కౌగలించు కొనబడిన శరీరము గల బాలసుబ్రహ్మణ్యమూర్తిని సేవింతును.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 19</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">కుమారేశసూనో గుహ స్కంద సేనా-</div>
+                    <div class="verse-line">పతే శక్తిపాణే మయూరాధిరూఢ ।</div>
+                    <div class="verse-line">పులిందాత్మజాకాంత భక్తార్తిహారిన్</div>
+                    <div class="verse-line">ప్రభో తారకారే సదా రక్ష మాం త్వమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">కుమారస్వామీ! ఈశ్వరపుత్రా! గుహా! స్కందా! దేవసేనాపతీ! శక్తి యను ఆయుధము హస్తమునందు గలవాడా! నెమలినెక్కినవాడా! వల్లీ నాథా! భక్తుల బాధలను తీర్చునట్టి ప్రభూ ! తారకాసురుని సంహారించిన సుబ్రహ్మణ్యా ! నీవు నన్నెప్పుడూ రక్షించుము</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 20</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">ప్రశాంతేంద్రియే నష్టసంజ్ఞే విచేష్టే</div>
+                    <div class="verse-line">కఫోద్గారివక్త్రే భయోత్కంపిగాత్రే ।</div>
+                    <div class="verse-line">ప్రయాణోన్ముఖే మయ్యనాథే తదానీం</div>
+                    <div class="verse-line">ద్రుతం మే దయాలో భవాగ్రే గుహ త్వమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఇంద్రియములు చేష్టలుడిగి, స్పృహ తప్పి, ముఖము కఫమును గ్రక్కుచుండ, శరీరము భయముచే కంపించుచుండ దిక్కులేక నేను ప్రాణ ప్రయాణమునకు సిద్ధుడనై యుండగా దయా స్వభావము గల కుమారస్వామీ! నీవు నా యెదుట నుందువు గాక !</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 21</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">కృతాంతస్య దూతేషు చండేషు కోపా-</div>
+                    <div class="verse-line">ద్దహచ్ఛింద్ధి భింద్ధీతి మాం తర్జయత్సు ।</div>
+                    <div class="verse-line">మయూరం సమారుహ్య మా భైరితి త్వం</div>
+                    <div class="verse-line">పురః శక్తిపాణిర్మమాయాహి శీఘ్రమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">భయంకరులైన యమదూతలు కోపముతో "కాల్చుము! భేదించుము" అని బెదిరించుచుండగా, శీఘ్రముగా నీవు నెమలి నెక్కి శక్తిని చేతగొని నా యెదుటకు రమ్ము !</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 22</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">ప్రణమ్యాసకృత్పాదయోస్తే పతిత్వా</div>
+                    <div class="verse-line">ప్రసాద్య ప్రభో ప్రార్థయేऽనేకవారమ్ ।</div>
+                    <div class="verse-line">న వక్తుం క్షమోऽహం తదానీం కృపాబ్ధే</div>
+                    <div class="verse-line">న కార్యాంతకాలే మనాగప్యుపేక్షా ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">కృపా సముద్రుడా! ప్రభో! అనేక పర్యాయములు నీ పాదములపై బడి నమస్కరించి బ్రతిమాలుకుని ప్రార్థించుచున్నాను. మరణము దరిజేరినప్పుడు నేను మాట్లాడలేను. ఓ కృపాసముద్రుడా! నా మరణకాలమున నీవు కొంచెముకూడ ఉపేక్షించకుము!</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 23</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">సహస్రాండభోక్తా త్వయా శూరనామా</div>
+                    <div class="verse-line">హతస్తారకః సింహవక్త్రశ్చ దైత్యః ।</div>
+                    <div class="verse-line">మమాంతర్హృదిస్థం మనఃక్లేశమేకం</div>
+                    <div class="verse-line">న హంసి ప్రభో కిం కరోమి క్వ యామి ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఓ ప్రభో! నీచే అనేక బ్రహ్మాండములను కబళించిన శూరుడను పేరు గల తారకుడు, సింహ ముఖుడు అను రాక్షసులు చంపబడిరి. నా హృదయమునందున్న మానసికబాధ నొక్క దానిని నీవేల నశింపజేయవు? ఏమి చేయుదును ? ఎచటకు పోయెదను ?</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 24</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">అహం సర్వదా దుఃఖభారావసన్నో</div>
+                    <div class="verse-line">భవాందీనబంధుస్త్వదన్యం న యాచే ।</div>
+                    <div class="verse-line">భవద్భక్తిరోధం సదా క్లృప్తబాధం</div>
+                    <div class="verse-line">మమాధిం ద్రుతం నాశయోమాసుత త్వమ్ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">పార్వతీ నందనా ! నేను ఎల్లప్పుడూ దుఃఖ భారముచే క్రుంగితిని, నీవు దీనబాంధవుడవు. నీకంటే ఇతరులను నేను ప్రార్థించను. నీ భక్తికి ఆటంకమైనదియు, ఎల్లప్పుడు బాధలతో నిండినదియు నగు నా మానసిక వ్యధను నీవు నశింపజేయుము</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 25</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">అపస్మారకుష్టక్షయార్శః ప్రమేహ-</div>
+                    <div class="verse-line">జ్వరోన్మాదగుల్మాదిరోగా మహాంతః ।</div>
+                    <div class="verse-line">పిశాచాశ్చ సర్వే భవత్పత్రభూతిం</div>
+                    <div class="verse-line">విలోక్య క్షణాత్తారకారే ద్రవంతే ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఓ తారకాసుర సంహారీ! స్మృతి తప్పుట, కుష్టు, క్షయ, మూలరోగము, ప్రమేహము, జ్వరము, చిత్తచాంచల్యము, గుల్మములు మొదలైన మహారోగములు, సమస్త పిశాచములు, నీ ఆలయములో లభించే పత్రవిభూతిని చూచిన క్షణకాలములో తొలగిపోవును.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 26</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">దృశి స్కందమూర్తిః శ్రుతౌ స్కందకీర్తి-</div>
+                    <div class="verse-line">ర్ముఖే మే పవిత్రం సదా తచ్చరిత్రమ్ ।</div>
+                    <div class="verse-line">కరే తస్య కృత్యం వపుస్తస్య భృత్యం</div>
+                    <div class="verse-line">గుహే సంతు లీనా మమాశేషభావాః ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">నా దృష్టియందు కుమారస్వామి దివ్యమూర్తి, చెవులయందు స్కందుని కీర్తి, నోటియందు ఎల్లప్పుడూ పవిత్రమైన స్వామి చరిత్ర, చేతులయందు ఆయన సేవ ఉన్నవై, శరీరము ఆయనకు దాసియై నా ఆలోచనలన్నీ ఆ గుహునియందు లీనమూలగుగాక</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 27</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">మునీనాముతాహో నృణాం భక్తిభాజా-</div>
+                    <div class="verse-line">మభీష్టప్రదాః సంతి సర్వత్ర దేవాః ।</div>
+                    <div class="verse-line">నృణామంత్యజానామపి స్వార్థదానే</div>
+                    <div class="verse-line">గుహాద్దేవమన్యం న జానే న జానే ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">మునులకు గాని లేక భక్తి పరులగు నరులకు గాని వాంఛితముల నొసంగు దేవులంతట గలరు. కాని అంత్యవర్ణ సంజాతులగు మానవులకు గూడ నిజాభీష్టముల నొసంగుటయందు కుమారస్వామి కంటె వేరు దైవమును నేనెరుంగను, నే నెరుంగను.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 28</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">కలత్రం సుతా బంధువర్గః పశుర్వా</div>
+                    <div class="verse-line">నరో వాథ నారీ గృహే యే మదీయాః ।</div>
+                    <div class="verse-line">యజంతో నమంతః స్తువంతో భవంతం</div>
+                    <div class="verse-line">స్మరంతశ్చ తే సంతు సర్వే కుమార ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఓ కుమారస్వామీ! నా భార్య, బిడ్డలు, బంధువులు, పశువుగాని మా ఇంటియందున్న నా వారందరూ, మగవాడుగాని, ఆడదిగాని, అందరు నిన్ను పూజించువారుగను, నీకు నమస్కరించువారుగను, నిన్ను స్తుతించువారుగను, నిన్ను స్మరించువారుగను నుందురుగాక!</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 29</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">మృగాః పక్షిణో దంశకా యే చ దుష్టా-</div>
+                    <div class="verse-line">స్తథా వ్యాధయో బాధకా యే మదంగే ।</div>
+                    <div class="verse-line">భవచ్ఛక్తితీక్ష్ణాగ్రభిన్నాః సుదూరే</div>
+                    <div class="verse-line">వినశ్యంతు తే చూర్ణితక్రౌంచశైల ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">క్రౌంచ పర్వతమును చూర్ణము చేసిన కుమారస్వామీ! నా శరీరమును బాధించు మృగములు గాని, పక్షులు గాని, దుష్టములైన అడవి ఈగలు గాని. వ్యాధులు గాని, నీ దగు శక్తియనెడి ఆయుధము యొక్క వాడి అయిన కొనచే భేదింప బడినవై మిక్కిలి దూరముగ నశించుగాక!</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 30</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">జనిత్రీ పితా చ స్వపుత్రాపరాధం</div>
+                    <div class="verse-line">సహేతే న కిం దేవసేనాధినాథ ।</div>
+                    <div class="verse-line">అహం చాతిబాలో భవాన్ లోకతాతః</div>
+                    <div class="verse-line">క్షమస్వాపరాధం సమస్తం మహేశ ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఓ దేవ సేనాపతీ! తల్లి గాని, తండ్రి గాని తన బిడ్డా యొక్క అపరాధమును మన్నింపరా ? నేను మిక్కిలి బాలుడను. నీవు లోకములకే తండ్రివి. కావున మహాప్రభూ ! నా సమస్తాపరాధములను క్షమించుము!</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 31</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">నమః కేకినే శక్తయే చాపి తుభ్యం</div>
+                    <div class="verse-line">నమశ్ఛాగ తుభ్యం నమః కుక్కుటాయ ।</div>
+                    <div class="verse-line">నమః సింధవే సింధుదేశాయ తుభ్యం</div>
+                    <div class="verse-line">పునః స్కందమూర్తే నమస్తే నమోऽస్తు ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">కుమారస్వామీ! నీ వాహన మగు నెమలికి, నీ శక్తి ఆయుధమునకు, నీకు, నీ మేకపోతునకు, నీ ధ్వజమగు కోడిపుంజునకు నమస్కారము. నీవు వసించు సింధు దేశమునకు, సముద్రమునకున్ను నమస్కారము. ఓ స్కందుడా! నీకు మరల మరల నమస్కారము.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 32</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">జయానందభూమం జయాపారధామం</div>
+                    <div class="verse-line">జయామోఘకీర్తే జయానందమూర్తే ।</div>
+                    <div class="verse-line">జయానందసింధో జయాశేషబంధో</div>
+                    <div class="verse-line">జయ త్వం సదా ముక్తిదానేశసూనో ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఆనందముతో నిండినవాడా! అపారమైన తేజస్సు గలవాడా! అమోఘమైన కీర్తి కలవాడా! ఆనంద రూపుడా, ఆనంద సముద్రుడా, అందరికీ బంధువైనవాడా! ఎల్లప్పుడు ముక్తినిచ్చు శివకుమారా ! నీకు జయము జయము.</div>
+                </div>
+                </div>
+
+            </div>
+
+            </div>
+
+            <div class="verse-container">
+                <div class="verse-number">శ్లోకము 33</div>
+                <div class="verse-content">
+                    <div class="verse-text">
+
+                    <div class="verse-line">భుజంగాఖ్యవృత్తేన క్లృప్తం స్తవం యః</div>
+                    <div class="verse-line">పఠేద్భక్తియుక్తో గుహం సంప్రణమ్య ।</div>
+                    <div class="verse-line">స పుత్రాన్కలత్రం ధనం దీర్ఘమాయు-</div>
+                    <div class="verse-line">ర్లభేత్స్కందసాయుజ్యమంతే నరః సః ॥</div>
+                    </div>
+                    <div class="verse-meaning">
+                    <div class="meaning-title">భావం:</div>
+                    <div class="meaning-text">ఎవడు భక్తితో సుబ్రహ్మణ్యేశ్వరుని నమస్కరించి భుజంగవృత్తముతో నున్న యీ స్తవమును పఠించునో ఆ మనుజుడు భార్యను, బిడ్డలను, ధనమును, దీర్ఘాయువును పొంది అంత్యకాలమున స్కంద సాయుజ్యము నొందు గాక !</div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="om-symbol">ॐ</div>
+            <div class="decorative-line"></div>
+            <p>ఓం శ్రీ శరవణ భవాయ నమః</p>
+            <p>హర హర మహాదేవ శంభో శంకర</p>
+        </footer>
+    </div>
+
+    <script>
+        (() => {
+            const audioSyncConfig = {
+                // Place split audio files here: audio/sloka-01.mp3 ... audio/sloka-33.mp3
+                basePath: "audio",
+                filePrefix: "sloka-",
+                fileExtension: ".mp3",
+                zeroPad: 2,
+
+                // Optional per-verse source override:
+                // verseOverrides: { 1: "audio/custom-01.mp3" }
+                verseOverrides: {}
+            };
+
+            const verseContainers = Array.from(document.querySelectorAll(".verse-container"));
+            if (!verseContainers.length) {
+                return;
+            }
+
+            const players = [];
+            let currentlyPlaying = null;
+
+            const parseVerseNumber = (text) => {
+                const match = text.match(/(\d+)/);
+                return match ? Number(match[1]) : null;
+            };
+
+            const getAudioSrc = (verseNo) => {
+                const overrideSrc = audioSyncConfig.verseOverrides[verseNo];
+                if (overrideSrc) {
+                    return overrideSrc;
+                }
+
+                const padded = String(verseNo).padStart(audioSyncConfig.zeroPad, "0");
+                return `${audioSyncConfig.basePath}/${audioSyncConfig.filePrefix}${padded}${audioSyncConfig.fileExtension}`;
+            };
+
+            const resetVisualState = (player) => {
+                player.container.classList.remove("audio-playing");
+                player.playBtn.classList.remove("is-playing");
+            };
+
+            verseContainers.forEach((container) => {
+                const verseNumberEl = container.querySelector(".verse-number");
+                const verseText = container.querySelector(".verse-text");
+                if (!verseNumberEl || !verseText) {
+                    return;
+                }
+
+                const verseNo = parseVerseNumber(verseNumberEl.textContent);
+                if (!verseNo) {
+                    return;
+                }
+
+                const panel = document.createElement("div");
+                panel.className = "audio-sync-panel";
+
+                const playBtn = document.createElement("button");
+                playBtn.type = "button";
+                playBtn.className = "audio-icon-btn";
+                playBtn.title = `శ్లోకము ${verseNo} ఆడియో`;
+                playBtn.setAttribute("aria-label", `Play శ్లోకము ${verseNo} audio`);
+                playBtn.innerHTML = "<span class=\"audio-wave\" aria-hidden=\"true\"><span></span><span></span><span></span></span>";
+
+                const audio = document.createElement("audio");
+                audio.className = "verse-audio-hidden";
+                audio.preload = "none";
+                audio.dataset.src = getAudioSrc(verseNo);
+
+                panel.append(playBtn, audio);
+                const headerRow = document.createElement("div");
+                headerRow.className = "verse-header-row";
+                verseText.prepend(headerRow);
+                headerRow.append(verseNumberEl, panel);
+
+                const player = {
+                    verseNo,
+                    container,
+                    panel,
+                    audio,
+                    playBtn
+                };
+                players.push(player);
+
+                const ensureAudioSource = () => {
+                    if (!audio.getAttribute("src")) {
+                        audio.setAttribute("src", audio.dataset.src);
+                    }
+                };
+
+                playBtn.addEventListener("click", async () => {
+                    panel.classList.remove("audio-error");
+                    if (audio.paused || audio.ended) {
+                        ensureAudioSource();
+                        try {
+                            await audio.play();
+                        } catch (_error) {
+                            panel.classList.add("audio-error");
+                            resetVisualState(player);
+                            if (currentlyPlaying === player) {
+                                currentlyPlaying = null;
+                            }
+                        }
+                    } else {
+                        audio.pause();
+                    }
+                });
+
+                audio.addEventListener("play", () => {
+                    players.forEach((other) => {
+                        if (other !== player && !other.audio.paused) {
+                            other.audio.pause();
+                            other.audio.currentTime = 0;
+                            resetVisualState(other);
+                        }
+                    });
+
+                    currentlyPlaying = player;
+                    panel.classList.remove("audio-error");
+                    player.container.classList.add("audio-playing");
+                    player.playBtn.classList.add("is-playing");
+                });
+
+                audio.addEventListener("pause", () => {
+                    if (!audio.ended) {
+                        resetVisualState(player);
+                        if (currentlyPlaying === player) {
+                            currentlyPlaying = null;
+                        }
+                    }
+                });
+
+                audio.addEventListener("ended", () => {
+                    resetVisualState(player);
+                    player.audio.currentTime = 0;
+                    if (currentlyPlaying === player) {
+                        currentlyPlaying = null;
+                    }
+                });
+
+                audio.addEventListener("error", () => {
+                    resetVisualState(player);
+                    panel.classList.add("audio-error");
+                    if (currentlyPlaying === player) {
+                        currentlyPlaying = null;
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
